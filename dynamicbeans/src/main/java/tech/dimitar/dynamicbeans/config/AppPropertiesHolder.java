@@ -1,4 +1,4 @@
-package tech.dimitar.dynamicbeans;
+package tech.dimitar.dynamicbeans.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -12,10 +12,10 @@ import java.util.List;
  * Reads in the properties file and maps the properties to local fields/arrays.
  */
 
-@Configuration
-@EnableConfigurationProperties
-@PropertySource("classpath:application.properties")
-@ConfigurationProperties(prefix="app.config") // from properties, find all app.config* values
+//@Configuration
+//@EnableConfigurationProperties
+//@PropertySource("classpath:application.properties")
+//@ConfigurationProperties(prefix="app.config") // from properties, find all app.config* values
 public class AppPropertiesHolder {
 
     private List<Bean> beans = new ArrayList<>();

@@ -1,4 +1,4 @@
-package tech.dimitar.dynamicbeans.custom;
+package tech.dimitar.dynamicbeans.custombeans;
 
 
 public class CustomBeanToBeInjected {

@@ -1,16 +1,13 @@
-package tech.dimitar.dynamicbeans;
+package tech.dimitar.dynamicbeans.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import tech.dimitar.dynamicbeans.custom.CustomBeanToBeInjected;
-
-import javax.annotation.Resource;
 
 /**
  * Runner class that will print out (to std out) the list of bean properties read by AppProperties.
  */
-@Component
+//@Component
 public class PrintAppPropertiesRunner implements CommandLineRunner {
 
     @Autowired
