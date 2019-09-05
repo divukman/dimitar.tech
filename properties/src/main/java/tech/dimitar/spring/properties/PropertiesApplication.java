@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
-@EnableConfigurationProperties(AppPropertiesArray.class)
+@EnableConfigurationProperties({AppPropertiesArray.class, AppOutsideAppProperties.class})
 public class PropertiesApplication {
 
 	public static void main(String[] args) {

@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
+@SuppressWarnings("Duplicates")
 public class PrintPropertiesRunner implements CommandLineRunner {
 
     @Autowired
@@ -19,6 +20,10 @@ public class PrintPropertiesRunner implements CommandLineRunner {
     @Autowired
     @Qualifier("${app.config.customBeanName}")
     DummyBean dummyBean;
+
+
+    @Autowired
+    AppOutsideAppProperties appOutsideAppProperties;
 
 
 
@@ -40,6 +45,12 @@ public class PrintPropertiesRunner implements CommandLineRunner {
         for ( AppPropertiesArray.Bean beanConfig : appPropertiesArray.getBeanList()) {
             System.out.println(beanConfig.toString());
         }
+        System.out.println("*******************************************************");
+
+        System.out.println("*******************************************************");
+        System.out.println("Array of properties:");
+        System.out.println("*************************");
+        appOutsideAppProperties.getBeanList().stream().forEach( System.out::println);
         System.out.println("*******************************************************");
     }
 }
